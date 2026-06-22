@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:00f7ff,100:7c3aed&height=260&section=header&text=Hemanth%20Kumar%20B&fontSize=60&fontColor=ffffff&fontAlignY=45&desc=Cybersecurity%20%7C%20Web%20Security%20%7C%20CTF%20Player&descSize=20&descAlignY=65&animation=fadeIn" width="100%"/>
+<img src="https://raw.githubusercontent.com/hemanthkumarb485/hemanthkumarb485/main/banner.svg" width="100%" alt="Hemanth Kumar B Banner"/>
 
-<br/>
+<br/><br/>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=whoami+%E2%86%92+N1ghtM4r3d4rk;Web+Security+%26+VAPT+Specialist;CTF+Hunter+%7C+6%2B+Podium+Finishes+%F0%9F%8F%86;Founder+%40+C1CC4D0+CTF+Team;Breaking+things+to+build+them+better!)](https://git.io/typing-svg)
 
