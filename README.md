@@ -163,9 +163,9 @@ A unified platform for managing academic life across campuses — one hub for sc
 
 | 🏅 Certificate | 🏫 Provider |
 |----------------|-------------|
+| Principle of Management| NPTEL |
 | Introduction to IoT (Silver) | NPTEL |
 | Programming in Java | NPTEL |
-| Agile Scrum Certification | Infosys Springboard |
 
 </div>
 
