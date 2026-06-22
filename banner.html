@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d1117; display: flex; justify-content: center; align-items: center; height: 100vh; }
+
+  .banner {
+    width: 900px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  /* Animated dark background */
+  .bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #0d1117 0%, #0a1628 40%, #0d1117 100%);
+  }
+
+  /* Grid lines */
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,247,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,247,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Glowing orbs */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: pulse 4s ease-in-out infinite alternate;
+  }
+  .orb1 { width: 300px; height: 300px; background: rgba(0,247,255,0.15); top: -80px; left: -60px; animation-delay: 0s; }
+  .orb2 { width: 250px; height: 250px; background: rgba(124,58,237,0.2); bottom: -80px; right: 50px; animation-delay: 1.5s; }
+  .orb3 { width: 180px; height: 180px; background: rgba(0,180,255,0.12); top: 50px; right: 200px; animation-delay: 0.8s; }
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.2); opacity: 1; }
+  }
+
+  /* Scanline effect */
+  .scanline {
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.03) 2px,
+      rgba(0,0,0,0.03) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* Left shield/lock icon area */
+  .icon-area {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .shield {
+    width: 70px;
+    height: 80px;
+    position: relative;
+  }
+
+  .shield svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 12px rgba(0,247,255,0.8));
+    animation: shieldGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes shieldGlow {
+    0% { filter: drop-shadow(0 0 8px rgba(0,247,255,0.6)); }
+    100% { filter: drop-shadow(0 0 20px rgba(0,247,255,1)); }
+  }
+
+  .status-dot {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: #00f7ff;
+    font-family: 'Courier New', monospace;
+  }
+
+  .dot {
+    width: 6px; height: 6px;
+    background: #00f7ff;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+
+  /* Main content */
+  .content {
+    position: absolute;
+    left: 160px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .tag-line {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: #00f7ff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+
+  .name {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(90deg, #ffffff 0%, #00f7ff 50%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    text-shadow: none;
+    filter: drop-shadow(0 0 30px rgba(0,247,255,0.3));
+  }
+
+  .roles {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .role-pill {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 1px solid;
+  }
+
+  .pill-cyan { background: rgba(0,247,255,0.1); border-color: rgba(0,247,255,0.4); color: #00f7ff; }
+  .pill-purple { background: rgba(124,58,237,0.15); border-color: rgba(124,58,237,0.5); color: #a78bfa; }
+  .pill-blue { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.4); color: #60a5fa; }
+
+  .stats-row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-num {
+    font-size: 22px;
+    font-weight: 800;
+    color: #00f7ff;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(0,247,255,0.5);
+  }
+
+  .stat-label {
+    font-size: 9px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 30px;
+    background: rgba(255,255,255,0.1);
+    align-self: center;
+  }
+
+  /* Right side — terminal card */
+  .terminal {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,247,255,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+  }
+
+  .term-header {
+    background: rgba(0,247,255,0.08);
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid rgba(0,247,255,0.15);
+  }
+
+  .term-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .td1 { background: #ff5f57; }
+  .td2 { background: #febc2e; }
+  .td3 { background: #28c840; }
+
+  .term-title {
+    font-family: 'Courier New', monospace;
+    font-size: 9px;
+    color: rgba(255,255,255,0.4);
+    margin-left: 4px;
+    letter-spacing: 1px;
+  }
+
+  .term-body {
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    line-height: 1.8;
+  }
+
+  .t-prompt { color: #00f7ff; }
+  .t-cmd { color: #ffffff; }
+  .t-out { color: rgba(255,255,255,0.5); font-size: 9px; }
+  .t-green { color: #28c840; }
+  .t-purple { color: #a78bfa; }
+
+  /* Floating particles */
+  .particles {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    width: 2px; height: 2px;
+    background: #00f7ff;
+    border-radius: 50%;
+    animation: float linear infinite;
+    opacity: 0;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(100%) translateX(0); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(-100%) translateX(20px); opacity: 0; }
+  }
+
+  /* Bottom accent line */
+  .accent-line {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00f7ff, #7c3aed, transparent);
+  }
+
+  /* Corner brackets */
+  .corner {
+    position: absolute;
+    width: 20px; height: 20px;
+    border-color: rgba(0,247,255,0.4);
+    border-style: solid;
+  }
+  .tl { top: 12px; left: 12px; border-width: 2px 0 0 2px; }
+  .tr { top: 12px; right: 12px; border-width: 2px 2px 0 0; }
+  .bl { bottom: 12px; left: 12px; border-width: 0 0 2px 2px; }
+  .br { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="bg"></div>
+  <div class="grid"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+  <div class="scanline"></div>
+
+  <!-- Corner brackets -->
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+
+  <!-- Left shield -->
+  <div class="icon-area">
+    <div class="shield">
+      <svg viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 2L4 14V32C4 47 15.5 61 30 65C44.5 61 56 47 56 32V14L30 2Z"
+              fill="rgba(0,247,255,0.08)" stroke="#00f7ff" stroke-width="1.5"/>
+        <path d="M30 10L10 20V33C10 44 18.5 54.5 30 58C41.5 54.5 50 44 50 33V20L30 10Z"
+              fill="rgba(0,247,255,0.05)" stroke="rgba(0,247,255,0.3)" stroke-width="1"/>
+        <circle cx="30" cy="30" r="8" fill="rgba(0,247,255,0.15)" stroke="#00f7ff" stroke-width="1.5"/>
+        <rect x="27" y="28" width="6" height="8" rx="1" fill="#00f7ff" opacity="0.9"/>
+        <path d="M26 28V25C26 22.2 28.2 20 31 20C33.8 20 36 22.2 36 25" stroke="#00f7ff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="status-dot">
+      <div class="dot"></div>
+      ACTIVE
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="tag-line">// cybersecurity · web dev · ctf</div>
+    <div class="name">Hemanth Kumar B</div>
+    <div class="roles">
+      <span class="role-pill pill-cyan">🔐 Web Security</span>
+      <span class="role-pill pill-purple">🏁 CTF Hunter</span>
+      <span class="role-pill pill-blue">💻 Dev</span>
+    </div>
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-num">6+</span>
+        <span class="stat-label">Podiums</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">2×</span>
+        <span class="stat-label">🥇 Gold</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Internships</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">CSE</span>
+        <span class="stat-label">Cyber Sec</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terminal card -->
+  <div class="terminal">
+    <div class="term-header">
+      <div class="term-dot td1"></div>
+      <div class="term-dot td2"></div>
+      <div class="term-dot td3"></div>
+      <span class="term-title">terminal</span>
+    </div>
+    <div class="term-body">
+      <div><span class="t-prompt">$ </span><span class="t-cmd">nmap -sV target</span></div>
+      <div class="t-out">Scanning...</div>
+      <div class="t-green">PORT 443 OPEN ✓</div>
+      <div style="margin-top:4px"><span class="t-prompt">$ </span><span class="t-cmd">whoami</span></div>
+      <div class="t-purple">N1ghtM4r3d4rk</div>
+      <div style="margin-top:4px"><span class="t-prompt">$ </span><span class="t-cmd">cat flag.txt</span></div>
+      <div class="t-green">flag{h3m4nth_w1ns}</div>
+    </div>
+  </div>
+
+  <!-- Particles -->
+  <div class="particles">
+    <div class="particle" style="left:15%;animation-duration:6s;animation-delay:0s;"></div>
+    <div class="particle" style="left:30%;animation-duration:8s;animation-delay:1s;background:#a78bfa"></div>
+    <div class="particle" style="left:50%;animation-duration:5s;animation-delay:2s;"></div>
+    <div class="particle" style="left:70%;animation-duration:7s;animation-delay:0.5s;background:#a78bfa"></div>
+    <div class="particle" style="left:85%;animation-duration:9s;animation-delay:1.5s;"></div>
+  </div>
+
+  <div class="accent-line"></div>
+</div>
+</body>
+</html>
