@@ -4,7 +4,7 @@
 
 <br/><br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=whoami+%E2%86%92+N1ghtM4r3d4rk;Web+Security+%26+VAPT+Specialist;CTF+Hunter+%7C+6%2B+Podium+Finishes+%F0%9F%8F%86;Founder+%40+C1CC4D0+CTF+Team;Breaking+things+to+build+them+better!)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=whoami+%E2%86%92+N1ght_M4r3_d4rk;Web+Security+%26+VAPT+Specialist;CTF+Hunter+%7C+6%2B+Podium+Finishes+%F0%9F%8F%86;Founder+%40+C1CC4D0+CTF+Team;Breaking+things+to+build+them+better!)](https://git.io/typing-svg)
 
 <br/>
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 👾 `whoami`
+## 👾 `who_am_i`
 
 ```python
 class Security_Profile:
@@ -33,7 +33,6 @@ class Security_Profile:
         "college"    : "R.M.K College of Engineering and Technology",
         "degree"     : "B.E CSE (Cyber Security)",
         "grad_year"  : 2027,
-        "cgpa"       : 7.38,
         "location"   : "Chennai, India 🇮🇳",
     }
 
@@ -54,9 +53,9 @@ class Security_Profile:
     ]
 
     currently = [
+        "🌐 Building Secure Web Apps",
         "🔐 Sharpening VAPT techniques",
         "🏁 Competing in CTFs",
-        "🌐 Building Secure Web Apps",
     ]
 ```
 
@@ -152,7 +151,6 @@ A unified platform for managing academic life across campuses — one hub for sc
 │  Jul–Aug 2025  │ 🔐 Cybersecurity Intern       @ Redynox (Online)  │
 │  Apr–May 2025  │ 🔐 Cybersecurity Intern       @ ShadowFox Online  │
 │  Sep 2024–Now  │ 🚩 Founder                    @ C1CC4D0 CTF Team  │
-│  2024–Now      │ 🎓 Secretary         @ CSE(CS) Student Assoc.     │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 ```
