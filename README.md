@@ -1,10 +1,17 @@
 <div align="center">
 
+<a href="https://hemanthkumarb485.github.io/hemanthkumarb485/">
+  <img src="https://hemanthkumarb485.github.io/hemanthkumarb485/banner.html" width="100%" height="280px" style="border:none;border-radius:12px;" />
+</a>
+
+<!-- FALLBACK: if iframe not supported, capsule render shows instead -->
+<!--
 <img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:00f7ff,100:7c3aed&height=260&section=header&text=Hemanth%20Kumar%20B&fontSize=60&fontColor=ffffff&fontAlignY=45&desc=Cybersecurity%20%7C%20Web%20Security%20%7C%20CTF%20Player&descSize=20&descAlignY=65&animation=fadeIn" width="100%"/>
+-->
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=whoami+%E2%86%92+N1ght_M4r3_d4rk;Web+Security+%26+VAPT+Specialist;CTF+Hunter+%7C+6%2B+Podium+Finishes+%F0%9F%8F%86;Founder+%40+C1CC4D0+CTF+Team;Breaking+things+to+build+them+better!)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=who_am_i+%E2%86%92+N1ght_M4r3_d4rk;Web+Security+%26+VAPT+Specialist;CTF+Hunter+%7C+6%2B+Podium+Finishes+%F0%9F%8F%86;Founder+%40+C1CC4D0+CTF+Team;Breaking+things+to+build+them+better!)](https://git.io/typing-svg)
 
 <br/>
 
@@ -28,12 +35,11 @@
 class Security_Profile:
     hemanth = {
         "name"       : "Hemanth Kumar B",
-        "alias"      : "N1ghtM4r3d4rk",
+        "alias"      : "N1ght_M4r3_d4rk",
         "role"       : "Cybersecurity Student | Web Developer | CTF Player",
         "college"    : "R.M.K College of Engineering and Technology",
         "degree"     : "B.E CSE (Cyber Security)",
         "grad_year"  : 2027,
-        "cgpa"       : 7.38,
         "location"   : "Chennai, India 🇮🇳",
     }
 
@@ -54,9 +60,9 @@ class Security_Profile:
     ]
 
     currently = [
+        "🌐 Building Secure Web Apps",
         "🔐 Sharpening VAPT techniques",
         "🏁 Competing in CTFs",
-        "🌐 Building Secure Web Apps",
     ]
 ```
 
@@ -198,20 +204,6 @@ A unified platform for managing academic life across campuses — one hub for sc
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hemanthkumarb485/hemanthkumarb485/output/github-contribution-grid-snake.svg" />
   <img alt="github-snake" src="https://raw.githubusercontent.com/hemanthkumarb485/hemanthkumarb485/output/github-contribution-grid-snake-dark.svg" />
 </picture>
-
-</div>
-
----
-
-## 🎯 Interests
-
-<div align="center">
-
-```
-🚩 Capture The Flag (CTF)        🔐 Penetration Testing
-🔑 Cryptography                   🔧 Reverse Engineering
-🧩 CTF Challenge Creation         🌐 Web Development
-```
 
 </div>
 
