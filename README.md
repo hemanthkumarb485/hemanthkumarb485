@@ -163,7 +163,7 @@ A unified platform for managing academic life across campuses — one hub for sc
 
 | 🏅 Certificate | 🏫 Provider |
 |----------------|-------------|
-| Principle of Management| NPTEL |
+| Principle of Management (Silver) | NPTEL |
 | Introduction to IoT (Silver) | NPTEL |
 | Programming in Java | NPTEL |
 
