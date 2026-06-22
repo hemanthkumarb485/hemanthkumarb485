@@ -189,7 +189,7 @@
     <text x="678" y="153" font-family="'Courier New', monospace" font-size="10.5" fill="#00f7ff">$ </text>
     <text x="693" y="153" font-family="'Courier New', monospace" font-size="10.5" fill="#e8eaf0">whoami</text>
 
-    <text x="678" y="169" font-family="'Courier New', monospace" font-size="10.5" fill="#a78bfa">N1ghtM4r3d4rk</text>
+    <text x="678" y="169" font-family="'Courier New', monospace" font-size="10.5" fill="#a78bfa">N1ght_M4r3_d4rk</text>
 
     <text x="678" y="189" font-family="'Courier New', monospace" font-size="10.5" fill="#00f7ff">$ </text>
     <text x="693" y="189" font-family="'Courier New', monospace" font-size="10.5" fill="#e8eaf0">cat flag.txt</text>
