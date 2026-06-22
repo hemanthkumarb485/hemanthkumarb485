@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=whoami+%E2%86%92+N1ghtM4r3d4rk;Web+Security+%26+VAPT+Specialist;CTF+Hunter+%7C+6%2B+Podiums+%F0%9F%8F%86;Founder+%40+C1CC4D0+CTF+Team;Breaking+things+to+build+them+better)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=whoami+%E2%86%92+N1ght_M4r3_d4rk;Web+Security+%26+VAPT+Specialist;CTF+Hunter+%7C+6%2B+Podiums+%F0%9F%8F%86;Founder+%40+C1CC4D0+CTF+Team;Breaking+things+to+build+them+better)](https://git.io/typing-svg)
 
 <br/>
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 👾 `whoami`
+## 👾 `who_am_i`
 
 ```python
 class Security_Profile:
