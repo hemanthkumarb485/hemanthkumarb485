@@ -1,8 +1,6 @@
 <div align="center">
 
-<a href="https://hemanthkumarb485.github.io/hemanthkumarb485/">
-  <img src="https://hemanthkumarb485.github.io/hemanthkumarb485/banner.html" width="100%" height="280px" style="border:none;border-radius:12px;" />
-</a>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:00f7ff,100:7c3aed&height=260&section=header&text=Hemanth%20Kumar%20B&fontSize=60&fontColor=ffffff&fontAlignY=45&desc=Cybersecurity%20%7C%20Web%20Security%20%7C%20CTF%20Player&descSize=20&descAlignY=65&animation=fadeIn" width="100%"/>
 
 <!-- FALLBACK: if iframe not supported, capsule render shows instead -->
 <!--
